@@ -1,0 +1,29 @@
+{
+  "name": "tugas-pekanan-4---naufal",
+  "version": "1.0.0",
+  "description": "Tugas Pekanan 4 - Naufal Zainul M",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kengyuuon/Tugas-Pekanan-4---Naufal.git"
+  },
+  "keywords": [
+    "Tugas"
+  ],
+  "author": "Naufal Zainul Muttaqin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kengyuuon/Tugas-Pekanan-4---Naufal/issues"
+  },
+  "homepage": "https://github.com/Kengyuuon/Tugas-Pekanan-4---Naufal#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "dotenv": "^16.0.3",
+    "jsonschema": "^1.4.1",
+    "supertest": "^6.3.3"
+  }
+}
