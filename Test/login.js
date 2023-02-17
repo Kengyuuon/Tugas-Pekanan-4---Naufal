@@ -40,8 +40,6 @@ describe("Test Create User", function(){
             expect(response.body.data).to.have.a.property('userId');
             expect(response.body.data).to.have.a.property('name');
             global.userIds = response.body.data.userId;
-            //console.log(response.body.data.userId)
-            //console.log(response.body.data.name)
             console.log(response.body)
             done();
         })
@@ -58,11 +56,6 @@ describe("Test Create User", function(){
         })
         .end (function(error, response){
             expect(response.status).to.equals(400)
-            //expect(response.body.data).to.have.a.property('userId');
-            //expect(response.body.data).to.have.a.property('name');
-            //global.userIds = response.body.data.userId;
-            //console.log(response.body.data.userId)
-            //console.log(response.body.data.name)
             console.log(response.body)
             done();
         })
@@ -78,17 +71,8 @@ describe("Test Get User", function(){
         api.get("/users/" + global.userIds)
         .set('Content-Type','Application/json')
         .set('Authorization', 'Bearer '+ global.token)
-        //.send( {
-            //name: 'kasircreate',
-            //email: 'naufalzm@gmail.com',
-            //password: 'Toko345'
-        //})
         .end (function(error, response){
             expect(response.status).to.equals(200)
-            //global.token = response.body.data.accessToken;
-            //console.log(response.body.data.userId)
-            //console.log(response.body.data.name)
-            //global.userId = response.body.data.userId;
             console.log(response.body)
             done();
         })
@@ -99,17 +83,8 @@ describe("Test Get User", function(){
         api.get("/users/failed")
         .set('Content-Type','Application/json')
         .set('Authorization', 'Bearer '+ global.token)
-        //.send( {
-            //name: 'kasircreate',
-            //email: 'naufalzm@gmail.com',
-            //password: 'Toko345'
-        //})
         .end (function(error, response){
             expect(response.status).to.equals(404)
-            //global.token = response.body.data.accessToken;
-            //console.log(response.body.data.userId)
-            //console.log(response.body.data.name)
-            //global.userId = response.body.data.userId;
             console.log(response.body)
             done();
         })
@@ -129,10 +104,6 @@ describe("Test update User", function(){
         })
         .end (function(error, response){
             expect(response.status).to.equals(200)
-            //global.token = response.body.data.accessToken;
-            //console.log(response.body.data.userId)
-            //console.log(response.body.data.name)
-            //global.userId = response.body.data.userId;
             console.log(response.body)
             done();
         })
@@ -150,10 +121,6 @@ describe("Test update User", function(){
         })
         .end (function(error, response){
             expect(response.status).to.equals(400)
-            //global.token = response.body.data.accessToken;
-            //console.log(response.body.data.userId)
-            //console.log(response.body.data.name)
-            //global.userId = response.body.data.userId;
             console.log(response.body)
             done();
         })
@@ -165,17 +132,8 @@ describe("Test Delete User", function(){
         api.delete("/users/" + global.userIds)
         .set('Content-Type','Application/json')
         .set('Authorization', 'Bearer '+ global.token)
-        //.send( {
-            //name: 'kasircreate',
-            //email: 'naufalzm@gmail.com',
-            //password: 'Toko345'
-        //})
         .end (function(error, response){
             expect(response.status).to.equals(200)
-            //global.token = response.body.data.accessToken;
-            //console.log(response.body.data.userId)
-            //console.log(response.body.data.name)
-            //global.userId = response.body.data.userId;
             console.log(response.body)
             done();
         })
@@ -186,17 +144,8 @@ describe("Test Delete User", function(){
         api.delete("/users/failed")
         .set('Content-Type','Application/json')
         .set('Authorization', 'Bearer '+ global.token)
-        //.send( {
-            //name: 'kasircreate',
-            //email: 'naufalzm@gmail.com',
-            //password: 'Toko345'
-        //})
         .end (function(error, response){
             expect(response.status).to.equals(404)
-            //global.token = response.body.data.accessToken;
-            //console.log(response.body.data.userId)
-            //console.log(response.body.data.name)
-            //global.userId = response.body.data.userId;
             console.log(response.body)
             done();
         })
